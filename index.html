@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
+    <title>Tyler Davis</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +18,25 @@
         .section {
             margin-bottom: 30px;
         }
+        .myPanel {
+            position: absolute;
+            width: 100px;
+            top: 0;
+            bottom: 0;
+            left: -100px;
+            background: red;
+            z-index: 100;
+            transition: all 0.5s;
+        }
+        .myPanel open {
+            left: 0;
+        }
     </style>
+    <script>
+        function togglePanel() {
+            document.getElementById("pannel").classList.toggle("open")
+        }
+    </script>
 </head>
 <body>
 
@@ -29,14 +47,14 @@
 
     <section class="section">
         <h2>Contact Information</h2>
-        <p>Email: tylrdvs96@gmail.com@example.com</p>
+        <p>Email: tylrdvs96@gmail.com</p>
         <p>LinkedIn: linkedin.com/in/tylrdvs</p>
         <p>GitHub: github.com/tylerd96</p>
     </section>
 
     <section class="section">
         <h2>Education</h2>
-        <p><strong>Degree in Computer Science</strong> - University of XYZ, Year</p>
+        <p><strong>Degree in Computer Science</strong> - Miami University, 2019</p>
     </section>
 
     <section class="section">
@@ -60,6 +78,9 @@
         <p><strong>Project Name</strong> - Description of the project and your role.</p>
         <!-- Add more projects as needed -->
     </section>
+
+    <div id="thePanel" class="myPanel">PanelContent</div>
+    <button onclick="togglePanel">Toggle</button>
 
     <footer>
         <p>Feel free to reach out for collaborations and opportunities!</p>
